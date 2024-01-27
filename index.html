@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(255, 255, 255);
+            position: fixed;
+            width: 100vw;
+            
+        }
+        .nav img{
+            height: 70px;
+            margin-left: 20px;
+        }
+        .btn button{
+            padding: 5px 20px;
+            margin: 15px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .btn button:hover{
+            color: rgb(185, 126, 17);
+            background-color: black;
+        }
+        .btn a{
+            text-decoration: none;
+            color: violet;
+        }
+        .heading{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 420px;
+            
+        }
+       
+        .heading::before{
+            content: "";
+            position: absolute;
+            background-image: url(https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?cs=srgb&dl=pexels-ella-olsson-1640774.jpg&fm=jpg);
+            background-position: center;
+            background-size: cover;
+            
+            background-repeat: no-repeat;
+           height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+        @media (max-width:500px){
+            .heading::before{
+             
+               width:100%;
+               
+            }
+        }
+        .heading h1{
+            font-size: 4rem;
+        }
+        @media (max-width:500px){
+            .heading h1{
+                display:flex;
+                flex-wrap:wrap;
+                font-size: 45px;
+                text-align: center;
+                flex-direction:column;
+            }
+        }
+        .search input{
+            padding: 15px 100px;
+            border-radius: 30px;
+
+        }
+        @media (max-width:500px){
+            .search input{
+               margin-bottom: 8px;
+               width:50vw;
+               display: block;
+            }
+        }
+        .search button{
+            padding: 15px 40px;
+            border-radius: 30px;
+            cursor: pointer;
+            background-color: rgb(126, 38, 227);
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+
+        }
+        @media (max-width:500px){
+            .search button{
+               margin-bottom: 8px;
+               width:50vw;
+               display: block;
+            }
+        }
+        .search button:hover{
+            background-color: rgb(138, 3, 138);
+        }
+        .h2{
+            text-align: center;
+            font-size: 25px;
+            margin-top: 80px;
+        }
+        .mainimg{
+            display: flex;
+            justify-content: space-evenly;
+        
+        }
+        @media (max-width:500px){
+            .mainimg{
+                display:flex;
+                flex-wrap:wrap;
+                flex-direction:column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        @media (max-width:768px) and (min-width:501px) {
+            .mainimg{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .belowheading{
+           justify-content: center;
+           align-items: center;
+           
+        }
+        .box1{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center;
+            width: 280px;
+            
+
+        }
+       
+       
+        .box2{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center;
+            width: 280px;
+        }
+        .box3{
+            
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center;
+            width: 280px;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div>
+            <img src="./download.png" alt="">
+
+        </div>
+        <div class="btn">
+            <a href="#">Order in the app</a>
+             
+            <button>Sign in</button>
+        </div>
+
+    </div>
+    <div class="heading">
+        <h1>Get food delivery and more</h1>
+        <div class="search">
+            <input type="search" name="" placeholder="Enter your delivery address">
+            <button>see what's nearby</button>
+        </div>
+    </div>
+    <div class="h2">
+        <h1>Why you'll love Grubhub</h1>
+    </div>
+    <div class="mainimg">
+        <div class="box1">
+            <div class="img">
+                <img src="./img1.svg" alt="">
+                
+            </div>
+            <div class="belowheading">
+                <h2>Something for everyone</h2>
+                <p>We've got every meal covered and more: snacks, alcohol, dessert, paper towels..</p>
+            </div>
+
+            </div>
+        <div class="box2">
+            <div class="img">
+                <img src="./img2.svg" alt="">
+
+            </div>
+            <div class="belowheading">
+                <h2>Delivery or pickup</h2>
+                <p>Sit back and relax, have us deliver to you or skip the line with pickup.</p>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="img">
+                <img src="./img3.svg" alt="">
+
+            </div>
+            <div class="belowheading">
+                <h2>Save with Grubhub+</h2>
+                <p>Join Grubhub+ and get unlimited $0 delivery fees, exclusive offers, and more.</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
